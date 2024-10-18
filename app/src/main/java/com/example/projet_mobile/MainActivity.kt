@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ProjetMobileTheme {
 
-              ShoppingCard()
+              Cartedevisite()
 
                 }
             }
@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-fun ShoppingCard() {
+fun Cartedevisite() {
 
     Column (
         modifier = Modifier
@@ -155,7 +155,7 @@ fun ShoppingCard() {
 fun CardPreview() {
     ProjetMobileTheme {
 
-        ShoppingCard()
+        Cartedevisite()
 
     }
     }
