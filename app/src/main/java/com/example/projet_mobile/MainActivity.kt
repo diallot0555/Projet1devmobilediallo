@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.sp
 import com.example.projet_mobile.ui.theme.ProjetMobileTheme
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.ui.res.stringResource
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +42,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ProjetMobileTheme {
 
-              ShoppingCard()
+                Cartedevisite()
 
                 }
             }
@@ -50,7 +51,7 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-fun ShoppingCard() {
+fun Cartedevisite() {
 
     Column (
         modifier = Modifier
@@ -73,17 +74,18 @@ fun ShoppingCard() {
                 painter = imge1,
                 contentDescription = "ProfilePic",
                 modifier = Modifier.size(185.dp)
+
             )
             Spacer(modifier = Modifier.height(15.dp))
 
             Text(
-                text = "Diallo thierno amadou",
+                text = stringResource(R.string.name),
                 fontSize = 22.sp, fontWeight = FontWeight.W500,
                 color = Color.DarkGray
             )
             // TITRE
             Text (
-                text = "CARTE DE VISITE",
+                text = stringResource(R.string.slogan),
                         fontSize = 16.sp,
                 fontWeight = FontWeight.W700
 
@@ -108,7 +110,7 @@ fun ShoppingCard() {
 
                 )
                 Spacer(modifier = Modifier.width(12.dp))
-                Text(text = "(+255) 05 55 58 80 48",
+                Text(text = stringResource(R.string.number),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.W500
                 )
@@ -128,7 +130,7 @@ fun ShoppingCard() {
                     modifier = Modifier.size(24.dp),
                 )
                 Spacer(modifier = Modifier.width(12.dp))
-                Text( text = "Thierno amadou", fontSize = 20.sp, fontWeight = FontWeight.W500)
+                Text( text = stringResource(R.string.name2), fontSize = 20.sp, fontWeight = FontWeight.W500)
             }
 
             Spacer(modifier = Modifier.height(15.dp))
@@ -144,7 +146,7 @@ fun ShoppingCard() {
                 )
 
                 Spacer(modifier = Modifier.width(12.dp))
-                Text(text = "diallot0555@gmail.com", fontSize = 20.sp, fontWeight = FontWeight.W500)
+                Text(text = stringResource(R.string.adresse), fontSize = 20.sp, fontWeight = FontWeight.W500)
             }
         }
     }
@@ -155,7 +157,7 @@ fun ShoppingCard() {
 fun CardPreview() {
     ProjetMobileTheme {
 
-        ShoppingCard()
+        Cartedevisite()
 
     }
     }
